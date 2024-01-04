@@ -17,3 +17,6 @@ def project_detail(request, pk):
     project = Project.objects.get(id=pk)
     context = {"project": project}
     return render(request, 'projects/project-detail.html', context) 
+
+def mybio(request):
+    return render(request, 'my_bio.html')

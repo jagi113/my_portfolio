@@ -16,7 +16,7 @@ class Project(models.Model):
         return self.title
     
     class Meta:
-        ordering = ("created_at",)
+        ordering = ("-created_at",)
     
 class Tag(models.Model):
     name = models.CharField(max_length=200)

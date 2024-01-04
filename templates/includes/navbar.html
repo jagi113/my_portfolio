@@ -1,26 +1,26 @@
 {% load static %}
 
 <header class="header">
-    <div class="container container--narrow">
-      <a href="{% url 'home' %}" class="header__logo">
-        <span class="logo">
-            <i class="fa-brands fa-python fa-2xl"></i>
-            <i class="fa-brands fa-square-js fa-2xl"></i>
-            <i class="fa-brands fa-react fa-2xl"></i>
-        </span>
-        <!--<img src="{% static 'images/logo.svg' %}" alt="DevSearch Logo" />-->
-      </a>
-      <nav class="header__nav">
-        <input type="checkbox" id="responsive-menu" />
-        <label for="responsive-menu" class="toggle-menu">
-          <span>Menu</span>
-          <div class="toggle-menu__lines"></div>
-        </label>
-        <ul class="header__menu">
-          <li class="header__menuItem"><a href="{% url 'projects:projects' %}">Projects</a></li>
-          <li class="header__menuItem"><a href="">My bio</a></li>
-          <li class="header__menuItem"><a href="" class="btn btn--sub">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container container--narrow">
+    <a href="{% url 'home' %}" class="header__logo">
+      <span class="logo">
+        <i class="fa-brands fa-python fa-2xl"></i>
+        <i class="fa-brands fa-square-js fa-2xl"></i>
+        <i class="fa-brands fa-react fa-2xl"></i>
+      </span>
+      <!--<img src="{% static 'images/logo.svg' %}" alt="DevSearch Logo" />-->
+    </a>
+    <nav class="header__nav">
+      <input type="checkbox" id="responsive-menu" />
+      <label for="responsive-menu" class="toggle-menu">
+        <span>Menu</span>
+        <div class="toggle-menu__lines"></div>
+      </label>
+      <ul class="header__menu">
+        <li class="header__menuItem"><a href="{% url 'projects:projects' %}">Projects</a></li>
+        <li class="header__menuItem"><a href="{% url 'mybio' %}">My bio</a></li>
+        <li class="header__menuItem"><a href="" class="btn btn--sub">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
