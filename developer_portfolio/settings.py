@@ -30,7 +30,7 @@ SECRET_KEY = getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.101.180"]
+ALLOWED_HOSTS = ["192.168.101.180", "192.168.101.195", "dory-aware-ultimately.ngrok-free.app"]
 
 
 # Application definition

@@ -19,4 +19,4 @@ def project_detail(request, pk):
     return render(request, 'projects/project-detail.html', context) 
 
 def mybio(request):
-    return render(request, 'my_bio.html')
+    return render(request, 'my_newbio.html')

@@ -1,0 +1,131 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title %} | About Me{% endblock%}
+
+{% block content %}
+<div class="container flex flex-row gap-8">
+    <div class="basis-3/4 p-4">
+        <h1>Jaroslav Girovsky</h1>
+        <p class="text-pretty text-justify indent-6">
+            Junior software engineer with ability to adapt while focused on achieving high-quality results. Working on
+            different kind of positions and often solving problems of various areas of life taught me to stay focused
+            and explore new areas of knowledge.
+            As self-educated programmer who has completed various courses mainly on
+            Python and JavaScript and continues to strive for acquiring new skills and education, I am eager to move
+            forward and obtain a new challenging position that will expand my learning and build upon my developer
+            skills.
+        </p>
+
+        <div class="mt-16 font-extrabold text-4xl">Work Experience</div>
+        <!-- <div class="mt-6">
+            <div class="font-bold text-3xl">Title</div>
+            <div class="mt-4 text-2xl">
+                <span>Position - </span>
+                <span class="italic text-xl">Technologies</span>
+            </div>
+            <div class="mt-3 text-xl">
+                <span>Company</span>
+                <span>| Month, Year - Month, Year</span>
+            </div>
+            <ul class="mt-3 font-light list-disc list-inside">
+                <li>Task1</li>
+                <li>Task2</li>
+            </ul>
+        </div> -->
+
+        <div class="mt-6 mb-10">
+            <div class="font-bold text-3xl">Homepage for websites www.modrastrecha.sk/.cz/<br>
+                www.mojasvadba.zoznam.sk/www.beremese.cz
+            </div>
+            <div class="mt-4 text-2xl">
+                <span>Full-Stact Developer - </span>
+                <span class="italic text-xl">Python — Django, Turbo, Stimulus, JavaScript, PosgtreSQL, Tailwind,
+                    Redis</span>
+            </div>
+            <div class="mt-3 text-xl">
+                <span>4nets, s.r.o </span>
+                <span>| September — December 2023</span>
+            </div>
+            <ul class="mt-3 font-light list-disc list-inside">
+                <li>Created Django views using optimized Django ORM queries and API
+                    requests and results often cached in Redis</li>
+                <li>Created Django views combined with Turbo Frames</li>
+                <li>Created HTML templates for Django views using Tailwind</li>
+                <li>Created changing-photoalbum-images animation using Stimulus</li>
+                <li>Since project included 4 domains, it was optimized for multilanguage and multi-purpose flexibility
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-6 mb-10">
+            <div class="font-bold text-3xl">Book store website</div>
+            <div class="mt-4 text-2xl">
+                <span>Full-Stact Developer - </span>
+                <span class="italic text-xl">Python — Django, PostgreSQL, docker</span>
+            </div>
+            <div class="mt-3 text-xl">
+                <span>Personal Project</span>
+                <span>| April 2023</span>
+            </div>
+            <ul class="mt-3 font-light list-disc list-inside">
+                <li>Created async python app to scrape book data using BeautifulSoup</li>
+                <li>Created PostgresSQL database running in docker container on
+                    Ubuntu personal server</li>
+                <li>Created django website presenting books with purchasing option</li>
+            </ul>
+        </div>
+
+        <div class="mt-6 mb-10">
+            <div class="font-bold text-3xl">Smaller projects</div>
+            <div class="mt-4 text-2xl">
+                <span>Python & PostgreSQL Developer - </span>
+                <span class="italic text-xl">Python, PostgreSQL</span>
+            </div>
+            <div class="mt-3 text-xl">
+                <span>Personal Projects</span>
+                <span>| February — March 2023</span>
+            </div>
+            <ul class="mt-3 font-light list-disc list-inside">
+                <li>OpenAI prompts - simple python app for asking Chat GPT questions</li>
+                <li>MailerLite connector - async api connector for MailerLite account</li>
+                <li>Favourite Healthy Recipes - PostgreSQL database created to store
+                    and manage recipes, instructions, and ingredients, as well as provide
+                    nutrition details based on the ingredients used in recipes. This data-
+                    base also tracked users' ratings of their favorite recipes and ingre-
+                    dients, and it made recommendations based on their preferences.</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="basis-1/4 p-4">
+        <div class="mt-8">
+            jaroslavgirovsky@gmail.com <br>
+            +421 911 812 199<br>
+            Veľká Tŕňa, Hlavná 124/7<br>
+            github.com/jagi113
+        </div>
+        <div class="mt-16 font-extrabold text-4xl">Skills</div>
+        <ul class="mt-3 font-light list-disc list-inside">
+            <li>Python — intermediate
+                <ul class="ml-8 -mt-1 text-xl list-disc list-inside">
+                    <li>Django — intermediate</li>
+                    <li>Pandas, Numpy — basic</li>
+                </ul>
+            </li>
+            <li>PostgreSQL — intermediate</li>
+            <li>JavaScript — intermediate</li>
+            <li>HTML, CSS — intermediate</li>
+            <li>Tailwind — intermediate</li>
+            <li>Turbo & Stimulus — basic</li>
+            <li>React.js & Redux — basic</li>
+            <li>Typescript — basic</li>
+            <li>Node.js — basic</li>
+            <li>Git — basic</li>
+            <li>Docker — basic</li>
+            <li>Kubernetes, Swarm — basic</li>
+            <li>Linux — basic</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
