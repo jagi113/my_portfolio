@@ -20,7 +20,7 @@
           <div class="form__field">
             <label for="formInput#search">Search By Projects </label>
             <input class="input input--text" id="formInput#search" type="text" name="search_query"
-              value="{{search_query}}" placeholder="Search by Project Title, Developer or Technology" />
+              value="{{search_query}}" placeholder="Search by Project Title or Technology" />
           </div>
 
           <input class="btn btn--sub btn--lg" type="submit" value="Search" />
@@ -37,8 +37,8 @@
         {% for project in results %}
         <div class="column">
           <div class="card project">
-            <a href="{% url 'projects:project-detail' project.id %}" class="project">
-              <img class="project__thumbnail" src="{{project.image.url}}" alt="{{project.name}} thumbnail" />
+            <a href="{% url 'projects:project-detail' project.id %}" class="project w-full">
+              <img class="w-full h-80 object-cover" src="{{project.image.url}}" alt="{{project.name}} thumbnail" />
               <div class="card__body">
                 <h3 class="project__title">{{project.title}}</h3>
                 <!--
@@ -49,8 +49,8 @@
                   -->
                 <div class="project__tags">
                   {% for tag in project.tags.all %}
-                  <span class="tag tag--pill tag--main"><small>{{tag}}</small>
-                    {% endfor %}
+                  <span class="tag tag--pill tag--main"><small>{{tag}}</small></span>
+                  {% endfor %}
                 </div>
               </div>
             </a>
