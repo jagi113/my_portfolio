@@ -18,11 +18,12 @@ from django.urls import path, include
 from django.views.generic.base import RedirectView
 from django.conf.urls.static import static
 from django.conf import settings
-from projects import views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url="projects/"), name='home'),
     path("projects/", include("projects.urls")), 
-    path('mybio/', views.mybio, name="mybio")
+    path('mybio/', views.mybio, name="mybio"),
+    path('contact/', views.contact, name="contact")
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
