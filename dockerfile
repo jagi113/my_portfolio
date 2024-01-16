@@ -1,6 +1,9 @@
 # Dockerfile
 FROM python:3.10
 
+ARG NGROK_AUTHTOKEN
+ENV NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
@@ -17,4 +20,4 @@ EXPOSE 8000
 # Define environment variable
 ENV NAME World
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]

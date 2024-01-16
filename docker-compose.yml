@@ -1,13 +1,37 @@
 version: '3'
 services:
-  web:
+  django-web:
     build: .
+    container_name: portfolio-website
     ports:
       - "8000:8000"
     restart: always
     command: sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
+    networks:
+      - portfolio_network
 
+  ngrok-service:
+    container_name: portfolio-ngrok
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/home/linuxlite/.config/ngrok/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/home/linuxlite/.config/ngrok/ngrok.yml
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    depends_on:
+      - django-web
+    networks:
+      - portfolio_network
+    ports:
+      - 4040:4040
 
-
+networks:
+  portfolio_network:
+    name: portfolio_network

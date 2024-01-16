@@ -3,12 +3,46 @@
 {% block title %} | Contact{% endblock%}
 
 {% block content %}
-<div class="mt-8">
-    jaroslavgirovsky@gmail.com <br>
-    +421 911 812 199<br>
-    Veľká Tŕňa, Hlavná 124/7<br>
-    github.com/jagi113
-</div>
+<div class="container">
+    <div class=" mt-8 flex flex-row gap-8">
+        <div class="basis-1/5 p-4 font-bold">
+            Email Address:<br>
+            Phone Number:<br>
+            Address:<br>
+            Github Account:<br>
+        </div>
+        <div class="basis-4/5 p-4">
+            girovskyjaroslav@gmail.com <br>
+            +421 911 812 199<br>
+            Veľká Tŕňa, Hlavná 124/7, Slovakia<br>
+            github.com/jagi113
+        </div>
+    </div>
+    <div class="mt-8 w-full md:w-3/4 mx-auto bg-gray-200 p-6 rounded-md shadow-md mb-36">
+        <h2 class="text-6xl font-bold mb-4">Contact Me</h2>
+        <form method="post" action="{% url 'contact' %}" class="space-y-4">
+            {% csrf_token %}
 
+            <div class="mb-4">
+                <label for="id_name" class="block text-gray-700 text-3xl font-bold mb-2">Name</label>
+                {{ form.name }}
+            </div>
+
+            <div class="mb-4">
+                <label for="id_email" class="block text-gray-700 text-3xl font-bold mb-2">Email Address</label>
+                {{ form.email }}
+            </div>
+
+            <div class="mb-4">
+                <label for="id_message" class="block text-gray-700 text-3xl font-bold mb-2">Message</label>
+                {{ form.message }}
+            </div>
+
+            <button type="submit" class="btn btn--sub btn--lg">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
 
 {% endblock %}

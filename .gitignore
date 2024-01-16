@@ -1,6 +1,8 @@
 .env
+.ngrok*
 venv/
 db.sqlite3
 **/__pycache__/
 node_modules/
 nohup.out
+staticfiles/
