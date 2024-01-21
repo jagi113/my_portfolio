@@ -20,7 +20,6 @@ from django.views.generic.base import RedirectView
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
-from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +27,7 @@ urlpatterns = [
     path("projects/", include("projects.urls")), 
     path('mybio/', views.mybio, name="mybio"),
     path('contact/', views.contact, name="contact")
-    # ,
-    # path('media/<path:path>', serve, {'document_root': settings.MEDIA_ROOT})
-]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]  
+
+if bool(settings.DEBUG):
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

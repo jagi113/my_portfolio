@@ -12,6 +12,23 @@ services:
     networks:
       - portfolio_network
 
+  nginx-server:
+    container_name: portfolio-nginx
+    image: nginx
+    restart: always
+    volumes:
+      - ./nginx/conf:/etc/nginx/conf.d:ro
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
+      - ./nginx/logs:/var/log/nginx 
+    depends_on:
+      - django-web
+    networks:
+      - portfolio_network
+    ports:
+      - "8001:80"
+
+
   ngrok-service:
     container_name: portfolio-ngrok
     image: ngrok/ngrok:latest
@@ -20,13 +37,13 @@ services:
       - "start"
       - "--all"
       - "--config"
-      - "/home/linuxlite/.config/ngrok/ngrok.yml"
+      - "/etc/.config/ngrok/ngrok.yml"
     volumes:
-      - ./ngrok.yml:/home/linuxlite/.config/ngrok/ngrok.yml
+      - ./ngrok.yml:/etc/.config/ngrok/ngrok.yml
     environment:
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
     depends_on:
-      - django-web
+      - nginx-server
     networks:
       - portfolio_network
     ports:

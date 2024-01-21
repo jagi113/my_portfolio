@@ -40,7 +40,7 @@ EMAIL_HOST_PASSWORD = getenv("EMAIL_PASSWORD")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["192.168.101.180", "192.168.101.195", "dory-aware-ultimately.ngrok-free.app", "0.0.0.0", "192.168.64.2"]
+ALLOWED_HOSTS = ["192.168.101.180", "192.168.101.195", "dory-aware-ultimately.ngrok-free.app", "0.0.0.0", "192.168.64.2", '*']
 
 # Setting for HTTP
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
@@ -59,7 +59,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware', # for serving static in deployment (in state Debug=False) without nginx
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,11 +134,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATICFILES_DIRS = [BASE_DIR / "static/"]
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles/"
 
 
 # Default primary key field type
@@ -146,5 +146,5 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = BASE_DIR / "/media/"
-MEDIA_URL = "/media/"   
+MEDIA_ROOT = BASE_DIR / "media/"
+MEDIA_URL = "media/"   
