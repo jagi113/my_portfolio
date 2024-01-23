@@ -2,8 +2,8 @@ version: 2
 authtoken: ${NGROK_AUTHTOKEN}
 
 tunnels:
-  django-web:
-    addr: "192.168.101.180:8001"
+  portfolio:
+    addr: portfolio-nginx:80 # for connecting with nginx container on the same network use inner port (not outer)
     labels: 
       - edge=edghts_2aaBTu6pO7FGyyngo2xEjAtMaCi
 
