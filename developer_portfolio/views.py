@@ -26,7 +26,7 @@ def contact(request):
                 fail_silently=False,
             )
 
-            return redirect('mybio')
+            return redirect('home')
 
     else:
         form = ContactForm()

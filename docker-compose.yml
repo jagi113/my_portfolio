@@ -39,7 +39,7 @@ services:
       - "--config"
       - "/etc/.config/ngrok/ngrok.yml"
     volumes:
-      - ./ngrok.yml:/etc/.config/ngrok/ngrok.yml
+      - ./.ngrok.yml:/etc/.config/ngrok/ngrok.yml
     environment:
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
     depends_on:

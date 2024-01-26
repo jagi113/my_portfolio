@@ -38,9 +38,13 @@ EMAIL_HOST_USER = getenv("EMAIL_USER_NAME")
 EMAIL_HOST_PASSWORD = getenv("EMAIL_PASSWORD")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.101.180", "192.168.101.195", "dory-aware-ultimately.ngrok-free.app", "0.0.0.0", "192.168.64.2", '*']
+ALLOWED_HOSTS = ["192.168.101.180", "192.168.101.195", "dory-aware-ultimately.ngrok-free.app",]
+
+CSRF_TRUSTED_ORIGINS = ["http://192.168.101.180:8001", "https://dory-aware-ultimately.ngrok-free.app"]
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
+
 
 # Setting for HTTP
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None

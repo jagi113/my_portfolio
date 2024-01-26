@@ -20,7 +20,7 @@
     </div>
     <div class="mt-8 w-full md:w-3/4 mx-auto bg-gray-200 p-6 rounded-md shadow-md mb-36">
         <h2 class="text-6xl font-bold mb-4">Contact Me</h2>
-        <form method="post" action="{% url 'contact' %}" class="space-y-4">
+        <form method="POST" action="{% url 'contact' %}" class="space-y-4">
             {% csrf_token %}
 
             <div class="mb-4">
