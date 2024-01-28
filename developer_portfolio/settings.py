@@ -38,7 +38,7 @@ EMAIL_HOST_USER = getenv("EMAIL_USER_NAME")
 EMAIL_HOST_PASSWORD = getenv("EMAIL_PASSWORD")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["192.168.101.180", "192.168.101.195", "dory-aware-ultimately.ngrok-free.app",]
 

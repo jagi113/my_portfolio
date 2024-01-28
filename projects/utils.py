@@ -39,5 +39,5 @@ def searchProjects(request):
     projects = Project.objects.distinct().filter(
         Q(title__icontains=search_query) |
         Q(description__icontains=search_query) |
-        Q(tags__name__icontains=search_query))
+        Q(tags__name__icontains=search_query)).order_by("-updated_at")
     return projects, search_query
