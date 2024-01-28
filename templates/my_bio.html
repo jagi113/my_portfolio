@@ -3,8 +3,8 @@
 {% block title %} | About Me{% endblock%}
 
 {% block content %}
-<div class="container flex flex-row gap-8">
-    <div class="basis-3/4 p-4">
+<div class="container flex flex-col lg:flex-row lg:gap-8">
+    <div class="lg:basis-3/4 py-4 px-2 lg:px-4">
         <h1>Jaroslav Girovsky</h1>
         <p class="text-pretty text-justify indent-6">
             Junior software engineer with ability to adapt while focused on achieving high-quality results. Working on
@@ -176,45 +176,49 @@
         </div>
 
     </div>
-    <div class="basis-1/4 p-4">
-        <div class="mt-8 font-extrabold text-4xl">Skills</div>
-        <ul class="mt-3 ml-8 font-light list-disc list-outside">
-            <li>Python — intermediate
-                <ul class="ml-4 -mt-1 text-xl list-disc list-outside">
-                    <li>Django — intermediate</li>
-                    <li>Pandas, Numpy — basic</li>
+    <div class="lg:basis-1/4 py-4 px-2 lg:px-4">
+        <div class="flex flex-col md:flex-row lg:flex-col">
+            <div class="md:basis-1/2 lg:w-full">
+                <div class="mt-8 font-extrabold text-4xl">Skills</div>
+                <ul class="mt-3 ml-8 font-light list-disc list-outside">
+                    <li>Python — intermediate
+                        <ul class="ml-4 -mt-1 text-xl list-disc list-outside">
+                            <li>Django — intermediate</li>
+                            <li>Pandas, Numpy — basic</li>
+                        </ul>
+                    </li>
+                    <li>PostgreSQL — intermediate</li>
+                    <li>JavaScript — intermediate</li>
+                    <li>HTML, CSS — intermediate</li>
+                    <li>Tailwind — intermediate</li>
+                    <li>Turbo & Stimulus — basic</li>
+                    <li>React.js & Redux — basic</li>
+                    <li>Typescript — basic</li>
+                    <li>Node.js — basic</li>
+                    <li>Git — basic</li>
+                    <li>Docker — basic</li>
+                    <li>Kubernetes, Swarm — basic</li>
+                    <li>Linux — basic</li>
                 </ul>
-            </li>
-            <li>PostgreSQL — intermediate</li>
-            <li>JavaScript — intermediate</li>
-            <li>HTML, CSS — intermediate</li>
-            <li>Tailwind — intermediate</li>
-            <li>Turbo & Stimulus — basic</li>
-            <li>React.js & Redux — basic</li>
-            <li>Typescript — basic</li>
-            <li>Node.js — basic</li>
-            <li>Git — basic</li>
-            <li>Docker — basic</li>
-            <li>Kubernetes, Swarm — basic</li>
-            <li>Linux — basic</li>
-        </ul>
+            </div>
+            <div class="md:basis-1/2 lg:w-full">
+                <div class="mt-16 md:mt-8 lg:mt-16 font-extrabold text-4xl">Soft Skills</div>
+                <ul class="mt-3 ml-8 font-light list-disc list-outside">
+                    <li>Critical thinking</li>
+                    <li>Problem-solving</li>
+                    <li>Adaptability</li>
+                    <li>Dependability</li>
+                    <li>Wilingness to learn</li>
+                </ul>
 
-        <div class="mt-16 font-extrabold text-4xl">Soft Skills</div>
-        <ul class="mt-3 ml-8 font-light list-disc list-outside">
-            <li>Critical thinking</li>
-            <li>Problem-solving</li>
-            <li>Adaptability</li>
-            <li>Dependability</li>
-            <li>Wilingness to learn</li>
-        </ul>
-
-        <div class="mt-16 font-extrabold text-4xl">Language Skills</div>
-        <ul class="mt-3 ml-8 font-light list-disc list-outside">
-            <li>English - B2</li>
-            <li>German - A2</li>
-            <li>Italian - A1</li>
-        </ul>
-
+                <div class="mt-16 font-extrabold text-4xl">Language Skills</div>
+                <ul class="mt-3 ml-8 font-light list-disc list-outside">
+                    <li>English - B2</li>
+                    <li>German - A2</li>
+                    <li>Italian - A1</li>
+                </ul>
+            </div>
+        </div>
         <div class="mt-16 font-extrabold text-4xl">IT Education</div>
         <ul class="mt-3 ml-8 font-light list-disc list-outside lineheight-normal">
             <a href="https://www.arjancodes.com/mindset" target="_blank">
