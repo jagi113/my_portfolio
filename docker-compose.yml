@@ -17,7 +17,7 @@ services:
     image: nginx
     restart: always
     volumes:
-      - ./nginx/conf:/etc/nginx/conf.d:ro
+      - ./nginx/conf:/etc/nginx/conf.d
       - ./staticfiles:/app/staticfiles
       - ./media:/app/media
       - ./nginx/logs:/var/log/nginx 

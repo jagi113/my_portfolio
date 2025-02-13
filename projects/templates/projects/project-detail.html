@@ -20,7 +20,7 @@
         </div>
         {% if project.source_link %}
         <a class="singleProject__liveLink" href="{{project.source_link}}" target="_blank"><i
-            class="im im-external-link"></i>Source Code
+            class="fa fa-external-link"></i>Source Code
         </a>
         {% endif%}
 
@@ -29,12 +29,12 @@
         <img class="singleProject__preview" src="{{project.image.url}}" alt="portfolio thumbnail" />
         <h2 class="singleProject__title">
           {% if project.demo_link %}
-          <a class="singleProject__liveLink" href="{{project.demo_link}}" target="_blank"><i
-              class="im im-external-link"></i>
-            {% endif %}
+          <a class="singleProject__liveLink" href="{{project.demo_link}}" target="_blank"><i class="fa fa-external-link"
+              size aria-hidden="true"></i>
             {{project.title}}
-            {% if project.demo_link %}
           </a>
+          {% else %}
+          {{project.title}}
           {% endif %}
         </h2>
         <h3 class="singleProject__subtitle">About the Project</h3>
